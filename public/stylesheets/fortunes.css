@@ -1,0 +1,11 @@
+#fortunes a {
+  border: 1px solid #dedede;
+  padding: 12px 20px;
+  color: #cd2626;
+  font-size: 1.6em;
+  font-family: "Droid Serif", serif;
+  text-decoration: none; }
+
+#headlines, #fortunes {
+  width: 400px;
+  float: left; }

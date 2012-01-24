@@ -1,0 +1,13 @@
+#headlines
+  %h1 headlines
+  - @headlines.each do |headline|
+    .title= headline.title
+    .author.date.active_category!= "published by #{article.author_name} in category #{category_link(article)} on #{article.created_date}"
+    - if article.featured_image
+      .featured_image= image_tag article.featured_image.asset.large.u
+
+= stylesheet_link_tag "fortunes"
+#fortunes
+  %h1 fortunes
+  - @fortunes.each do |fortune|
+    = link_to fortune.title, article_path(fortune), :class => "title"

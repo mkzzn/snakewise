@@ -22,5 +22,5 @@ Contented::Application.routes.draw do
 
   get "home/index"
 
-  root :to => "articles#index"
+  root :to => "pages#homepage"
 end
