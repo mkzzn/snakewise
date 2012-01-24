@@ -1,18 +1,17 @@
-.section.home
+.section.home.articles
   = link_to "Home", root_path, :class => active_on("home title", :pages => [:homepage])
-
-.section.articles
-  = link_to "Articles", articles_path, :class => active_on("articles title", :articles => true)
   - if can? :create, Article
     = link_to "New", new_article_path, :class => "new_article"
 
-.section.categories
-  = link_to "Categories", categories_path, :class => active_on("categories title", :categories => true)
-  - if can? :create, Category
-    = link_to "New", new_category_path, :class => "new_category"
+- Category.all.each do |category|
+  .section.home
+    = link_to category.title, category_path(category), :class => "title"
 
-.section.writers
-  = link_to "Writers", writers_page_path, :class => active_on("writers title", :writers => true)
+.section#feeds
+  = link_to "RSS/ATOM", feed_path, :class => "feed"
+
+-# .section.writers
+-#   = link_to "Writers", writers_page_path, :class => active_on("writers title", :writers => true)
 
 -# .section.testimonials
 -#   = link_to "Testimonials", testimonials_path, :class => active_on("testimonials title", :testimonials => true)

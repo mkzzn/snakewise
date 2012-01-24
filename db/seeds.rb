@@ -16,3 +16,7 @@ User.create :email => "mk@mkzzn.org",
 user = User.find_by_email "mk@mkzzn.org"
 user.confirmed_at = Time.now
 user.save
+
+["Headlines", "Fortunes", "Bad Advice", "Wikipediot", "Bestsellers", "Letters To The Editor", "Bands"].each do |category|
+  Category.create :title => category
+end

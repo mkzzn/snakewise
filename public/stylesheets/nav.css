@@ -1,24 +1,26 @@
 #navigation {
-  width: 100%;
-  height: 48px;
+  float: left;
+  width: 160px;
   font-family: Ubuntu;
   padding-bottom: 2px;
-  border-bottom: 1px dotted #cccccc; }
+  padding-left: 10px; }
   #navigation a {
     font-size: 1.2em;
     color: black;
-    float: left;
     display: block;
+    float: left;
     font-weight: normal;
     position: relativ;
     text-decoration: none;
-    padding: 0 6px 8px 6px;
+    padding: 0 6px;
     margin: 0; }
-    #navigation a.title {
+    #navigation a.title, #navigation a.feed {
       font-weight: bold;
-      font-size: 2.4em; }
-      #navigation a.title:hover {
+      font-size: 2em; }
+      #navigation a.title:hover, #navigation a.feed:hover {
         text-decoration: none; }
+    #navigation a.feed {
+      color: #f07d55; }
     #navigation a:hover {
       text-decoration: underline; }
   #navigation .section {
@@ -31,3 +33,6 @@
       #navigation .section.nav_item a.title:hover, #navigation .section.nav_item a.title.active, #navigation .section.home a.title:hover, #navigation .section.home a.title.active, #navigation .section.articles a.title:hover, #navigation .section.articles a.title.active, #navigation .section.categories a.title:hover, #navigation .section.categories a.title.active, #navigation .section.writers a.title:hover, #navigation .section.writers a.title.active {
         color: #0065ba;
         border-bottom: 2px solid #0065ba; }
+    #navigation .section a.feed:hover, #navigation .section a.feed.active {
+      color: #ff6b37;
+      border-bottom: 2px solid #ff6b37; }

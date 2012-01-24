@@ -1,24 +1,27 @@
 #navigation
-  width: 100%
-  height: 48px
+  float: left
+  width: 160px
   font-family: Ubuntu
   padding-bottom: 2px
-  border-bottom: 1px dotted #ccc
+  padding-left: 10px
   a
     font-size: 1.2em
     color: black
-    float: left
     display: block
+    float: left
     :font-weight normal
     :position relativ
     :text-decoration none
-    :padding 0 6px 8px 6px
+    :padding 0 6px
     :margin 0
-    &.title
+    &.title, &.feed
       :font-weight bold
-      :font-size 2.4em
+      :font-size 2em
       &:hover
         :text-decoration none
+
+    &.feed
+      :color #F07D55
     &:hover
       :text-decoration underline
   .section
@@ -33,3 +36,8 @@
         &:hover, &.active
           :color #0065BA
           :border-bottom 2px solid #0065BA
+
+    a.feed
+      &:hover, &.active
+        :color #FF6B37
+        :border-bottom 2px solid #FF6B37

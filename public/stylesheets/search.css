@@ -15,27 +15,19 @@
     padding: 6px 8px;
     font-family: Ubuntu, Absolut; }
 
-#session, #feeds {
+#session {
   float: left;
   text-align: center;
   padding: 8px 0;
   margin: 0 0 0 12px; }
-  #session a, #feeds a {
+  #session a {
     font-family: Ubuntu, Absolut;
     margin-right: 8px;
     color: black;
     font-size: 1.6em;
     text-decoration: none; }
-    #session a:hover, #feeds a:hover {
+    #session a:hover {
       text-decoration: underline; }
 
-#feeds {
-  float: right; }
-  #feeds a {
-    background: #d64d1d;
-    margin-right: 0;
-    color: white;
-    padding: 4px 8px 6px 8px;
-    font-family: Ubuntu;
-    font-weight: bold;
-    font-size: 1.4em; }
+#feeds a {
+  color: #d64d1d; }
