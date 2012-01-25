@@ -9,5 +9,4 @@
 = stylesheet_link_tag "fortunes"
 #fortunes
   %h1 fortunes
-  - @fortunes.each do |fortune|
-    = link_to fortune.fortune, fortune_path(fortune), :class => "title"
+  = render @fortunes

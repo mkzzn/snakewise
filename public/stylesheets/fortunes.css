@@ -17,10 +17,31 @@
     font-weight: normal;
     margin: 20px 0 0 0; }
 
-#fortune a.title, .fortune a.title {
-  font-size: 4.2em;
-  color: #cd2626;
-  font-size: 1.6em;
-  font-family: "Droid Serif", serif; }
-#fortune a.title:hover, .fortune a.title:hover {
-  text-decoration: underline; }
+.fortune {
+  margin-top: 20px; }
+  .fortune a.title {
+    color: #cd2626;
+    font-family: "Droid Serif", serif;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: none; }
+  .fortune .published {
+    font-family: "Droid Serif", serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: none; }
+  .fortune h4 a.title {
+    font-size: 36px; }
+  .fortune h4 a.title:hover {
+    text-decoration: underline; }
+  .fortune a.title {
+    font-size: 18px; }
+  .fortune a.title:hover {
+    text-decoration: underline; }
+  .fortune .info {
+    font-family: "Droid Serif", serif;
+    text-transform: none;
+    font-weight: normal;
+    font-size: 12px; }
+    .fortune .info .byline {
+      display: inline; }

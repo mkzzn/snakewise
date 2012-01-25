@@ -1,10 +1,14 @@
 = stylesheet_link_tag "fortunes"
 
 %div[@fortune]
-  = link_to @fortune.fortune, @fortune, :class => "title"
+  %h4
+    = link_to @fortune.fortune, @fortune, :class => "title"
+    .info
+      - if can? :manage, @fortune
+        %span.published= "[ #{@fortune.published_state} ]"
+      .byline!= "by #{@fortune.author_name} on #{@fortune.created_date}"
+
   .resource_links
-    - if can? :manage, Fortune
-      .published= @fortune.published_state
     - if can? :destroy, @fortune
       = button_to "Delete", @fortune, :method => :delete, :class => :destroy
     - if can? :edit, @fortune

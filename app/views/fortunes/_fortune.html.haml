@@ -3,7 +3,7 @@
     = link_to fortune.fortune, fortune_path(fortune), :class => "title"
     .info
       - if can? :edit, fortune
-        .published= fortune.published_state
-      .author.date.active_category!= "published by #{fortune.author_name} on #{fortune.created_date}"
+        %span.published= "[ #{fortune.published_state} ]"
+      .author.date!= "by #{fortune.author_name} on #{fortune.created_date}"
     .clear
     -# .comments= comments_link(fortune)
