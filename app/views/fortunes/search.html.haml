@@ -1,0 +1,4 @@
+= stylesheet_link_tag "fortunes"
+%h2 Search
+= "Found #{pluralize(@fortunes.count, 'fortune')} with keyword \"#{params[:keyword]}\""
+= render @fortunes

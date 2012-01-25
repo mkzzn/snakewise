@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111221205042) do
+ActiveRecord::Schema.define(:version => 20120125210209) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -27,14 +27,6 @@ ActiveRecord::Schema.define(:version => 20111221205042) do
   end
 
   add_index "articles", ["slug"], :name => "index_articles_on_slug", :unique => true
-
-  create_table "assets", :force => true do |t|
-    t.integer  "attachable_id"
-    t.string   "attachable_type"
-    t.string   "asset"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "attachments", :force => true do |t|
     t.text     "description"
@@ -62,6 +54,16 @@ ActiveRecord::Schema.define(:version => 20111221205042) do
     t.datetime "updated_at"
     t.integer  "article_id"
     t.integer  "user_id"
+  end
+
+  create_table "fortunes", :force => true do |t|
+    t.string   "fortune"
+    t.string   "lucky_numbers"
+    t.string   "learn_chinese"
+    t.integer  "user_id"
+    t.boolean  "published"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|

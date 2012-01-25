@@ -3,8 +3,8 @@
 
 development:
   adapter: postgresql
-  database: contented_development
-  username: contented
+  database: snakewise_development
+  username: snakewise
   password: "M394P455W0Rd!!!"
   host: localhost
   encoding: utf8
@@ -13,8 +13,8 @@ development:
 
 test: &TEST
   adapter: postgresql
-  database: contented_test
-  username: contented
+  database: snakewise_test
+  username: snakewise
   password: "M394P455W0Rd!!!"
   host: localhost
   encoding: utf8
@@ -26,8 +26,8 @@ cucumber:
 
 production:
   adapter: postgresql
-  database: contented_production
-  username: contented
+  database: snakewise_production
+  username: snakewise
   password: "M394P455W0Rd!!!"
   host: localhost
   encoding: utf8

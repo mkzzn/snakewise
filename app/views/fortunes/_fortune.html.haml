@@ -1,0 +1,13 @@
+- if can? :view, fortune
+  %div[fortune]{:class => cycle("odd", "even", :name => "fortunes")}
+    = link_to fortune.title, fortune_path(fortune), :class => "title"
+    .info
+      - if can? :edit, fortune
+        .published= fortune.published_state
+      .author.date.active_category!= "published by #{fortune.author_name} in category #{category_link(fortune)} on #{fortune.created_date}"
+    .clear
+    .comments= comments_link(fortune)
+    - if fortune.featured_image
+      .featured_image= image_tag fortune.featured_image.asset.large.url
+    .teaser= markdown(fortune.teaser)
+    .clear

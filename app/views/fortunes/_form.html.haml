@@ -1,0 +1,20 @@
+= stylesheet_link_tag "fortunes"
+
+.resource_links
+  = link_to "Cancel", @fortune, :id => "cancel_editing"
+= nested_form_for @fortune, :html => { :multipart => true } do |f|
+  = f.error_messages
+  .fields
+    = f.label :fortune
+    = f.text_field :fortune
+  .fields
+    = f.label :lucky_numbers
+    = f.text_field :lucky_numbers
+  .fields
+    = f.label :learn_chinese
+    = f.text_field :learn_chinese 
+  .fields
+    = f.label :published, "Published?"
+    = f.check_box :published
+  .fields
+    = f.submit
