@@ -4,9 +4,9 @@
   %h4
     = link_to @fortune.fortune, @fortune, :class => "title"
     .info
+      .byline!= "by #{@fortune.author_name} on #{@fortune.created_date}"
       - if can? :manage, @fortune
         %span.published= "[ #{@fortune.published_state} ]"
-      .byline!= "by #{@fortune.author_name} on #{@fortune.created_date}"
 
   .resource_links
     - if can? :destroy, @fortune

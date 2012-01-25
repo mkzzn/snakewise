@@ -2,8 +2,8 @@
   %div[fortune]{:class => cycle("odd", "even", :name => "fortunes")}
     = link_to fortune.fortune, fortune_path(fortune), :class => "title"
     .info
+      .byline!= "by #{fortune.author_name} on #{fortune.created_date}"
       - if can? :edit, fortune
         %span.published= "[ #{fortune.published_state} ]"
-      .author.date!= "by #{fortune.author_name} on #{fortune.created_date}"
     .clear
     -# .comments= comments_link(fortune)
