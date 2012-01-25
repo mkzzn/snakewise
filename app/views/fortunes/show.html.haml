@@ -1,7 +1,7 @@
 = stylesheet_link_tag "fortunes"
 
 %div[@fortune]
-  %h4= link_to @fortune.fortune, @fortune, :class => "fortune"
+  = link_to @fortune.fortune, @fortune, :class => "title"
   .resource_links
     - if can? :manage, Fortune
       .published= @fortune.published_state

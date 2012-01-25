@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def homepage
     @headlines = Article.where :category_id => 2
-    @fortunes = Article.where :category_id => 3
+    @fortunes = Fortune.published.all
   end
 
   def writers

@@ -1,5 +1,6 @@
 class Comment < ActiveRecord::Base
-  belongs_to :article
+  belongs_to :commentable
   validates :body, :presence => true
-  validates :article_id, :presence => true
+  validates :commentable_type, :presence => true
+  validates :commentable_id, :presence => true
 end

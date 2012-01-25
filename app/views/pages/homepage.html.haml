@@ -10,4 +10,4 @@
 #fortunes
   %h1 fortunes
   - @fortunes.each do |fortune|
-    = link_to fortune.title, article_path(fortune), :class => "title"
+    = link_to fortune.fortune, fortune_path(fortune), :class => "title"

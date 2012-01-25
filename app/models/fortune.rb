@@ -1,5 +1,5 @@
 class Fortune < ActiveRecord::Base
-  has_many :comments, :dependent => :destroy
+  has_many :comments, :as => :attachable, :dependent => :destroy
   belongs_to :user
 
   validates_presence_of :fortune, :allow_blank => false
