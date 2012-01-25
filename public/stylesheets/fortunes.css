@@ -45,3 +45,12 @@
     font-size: 12px; }
     .fortune .info .byline {
       display: inline; }
+  .fortune .resource_links a.edit {
+    color: black;
+    font-family: "Droid Serif", serif;
+    font-size: 14px;
+    text-decoration: none;
+    float: left;
+    padding: 4px; }
+  .fortune .resource_links input {
+    float: left; }

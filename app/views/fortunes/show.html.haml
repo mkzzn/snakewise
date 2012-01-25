@@ -9,10 +9,10 @@
         %span.published= "[ #{@fortune.published_state} ]"
 
   .resource_links
-    - if can? :destroy, @fortune
-      = button_to "Delete", @fortune, :method => :delete, :class => :destroy
     - if can? :edit, @fortune
       = link_to "Edit", edit_fortune_path(@fortune), :class => "edit"
+    - if can? :destroy, @fortune
+      = button_to "Delete", @fortune, :method => :delete, :class => :destroy
 
 -# #comments
 -#   %h2 Comments
