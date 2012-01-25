@@ -3,27 +3,15 @@ class Ability
 
   def initialize(user)
     @user = user || User.new
-    set_abilities_by_role
-  end
-
-  def set_abilities_by_role
     case @user.role
     when "admin"
       can :manage, :all
     when "reader"
-      can_view_published_article
+      can :view, Fortune, :published => true
       can_manage_self
       can :create, Comment
       can_delete_own_comment
     end
-  end
-
-  def can_view_rough_drafts
-    can [:view], Article, :role => "admin"
-  end
-
-  def can_view_published_article
-    can [:view], Article, :published => true
   end
 
   def can_manage_self

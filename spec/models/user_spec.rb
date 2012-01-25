@@ -44,6 +44,18 @@ describe User do
     end
   end
 
+  describe "admin?" do
+    it "should be true if the use has an admin role" do
+      @user = Factory :user, :role => "admin"
+      @user.admin?.should be_true
+    end
+
+    it "should not be true if the user doesn't have an admin role" do
+      @user = Factory :user, :role => "reader"
+      @user.admin?.should be_false
+    end
+  end
+
   describe "full_name" do
     it "should combine the first and last names" do
       user = Factory :user, :first_name => "Steve", :last_name => "Barker"

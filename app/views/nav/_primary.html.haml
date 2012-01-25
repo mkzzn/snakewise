@@ -1,24 +1,22 @@
-.section.home.articles
-  = link_to "Home", root_path, :class => active_on("home title", :pages => [:homepage])
-  - if can? :create, Article
-    = link_to "New", new_article_path, :class => "new_article"
+.section.home
+  = link_to "Home", root_path, :class => active_on("title", :pages => [:homepage])
+
+.section.home.fortunes
+  = link_to "Fortunes", root_path, :class => active_on("fortune title", :fortunes => true)
+  - if can? :create, Fortune
+    = link_to "New", new_fortune_path, :class => "new"
+
+-# .section.headlines
+-#   = link_to "Headlines", root_path, :class => active_on("headline title", :headlines => true)
+-#   - if can? :create, Headline
+-#     = link_to "New", new_headline_path, :class => "new"
 
 - Category.all.each do |category|
   .section.home
     = link_to category.title, category_path(category), :class => "title"
 
 .section#feeds
-  = link_to "RSS/ATOM", feed_path, :class => "feed"
+  = link_to "Fortunes", feed_path, :class => "feed"
 
 -# .section.writers
 -#   = link_to "Writers", writers_page_path, :class => active_on("writers title", :writers => true)
-
--# .section.testimonials
--#   = link_to "Testimonials", testimonials_path, :class => active_on("testimonials title", :testimonials => true)
--#   - if current_user and can?(:create, Testimonial)
--#     = link_to "New", new_article_path
-
--# .section.links
--#   = link_to "Links", links_path, :class => active_on("links title", :links => true)
--#   - if current_user and can?(:create, Link)
--#     = link_to "New", new_link_path

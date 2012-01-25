@@ -3,18 +3,19 @@
 %div[@fortune]
   %h4= link_to @fortune.fortune, @fortune, :class => "fortune"
   .resource_links
-    .published= @fortune.published_state
+    - if can? :manage, Fortune
+      .published= @fortune.published_state
     - if can? :destroy, @fortune
       = button_to "Delete", @fortune, :method => :delete, :class => :destroy
     - if can? :edit, @fortune
       = link_to "Edit", edit_fortune_path(@fortune), :class => "edit"
 
-#comments
-  %h2 Comments
-  = render :partial => @comments
-  - if current_user and can? :create, @comment
-    = form_for [@fortune, @comment] do |f|
-      .fields
-        = f.label :body, "Comment"
-        = f.text_area :body
-      = f.submit
+-# #comments
+-#   %h2 Comments
+-#   = render :partial => @comments
+-#   - if current_user and can? :create, @comment
+-#     = form_for [@fortune, @comment] do |f|
+-#       .fields
+-#         = f.label :body, "Comment"
+-#         = f.text_area :body
+-#       = f.submit
