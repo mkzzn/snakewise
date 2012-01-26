@@ -1,0 +1,26 @@
+= stylesheet_link_tag "headlines"
+
+%div[@headline]
+  %h4
+    = link_to @headline.headline, @headline, :class => "title"
+    .info
+      .byline!= "by #{@headline.author_name} on #{@headline.created_date}"
+      - if can? :manage, @headline
+        %span.published= "[ #{@headline.published_state} ]"
+  = image_tag @headline.image_url if @headline.image?
+
+  .resource_links
+    - if can? :edit, @headline
+      = link_to "Edit", edit_headline_path(@headline), :class => "edit"
+    - if can? :destroy, @headline
+      = button_to "Delete", @headline, :method => :delete, :class => :destroy
+
+-# #comments
+-#   %h2 Comments
+-#   = render :partial => @comments
+-#   - if current_user and can? :create, @comment
+-#     = form_for [@fortune, @comment] do |f|
+-#       .fields
+-#         = f.label :body, "Comment"
+-#         = f.text_area :body
+-#       = f.submit

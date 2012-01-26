@@ -1,0 +1,4 @@
+= stylesheet_link_tag "headlines"
+%h2 Search
+= "Found #{pluralize(@headlines.count, 'headline')} with keyword \"#{params[:keyword]}\""
+= render @headlines

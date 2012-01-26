@@ -1,0 +1,18 @@
+= stylesheet_link_tag "headlines"
+
+.resource_links
+  = link_to "Cancel", @headline, :id => "cancel_editing"
+= nested_form_for @headline, :html => { :multipart => true } do |f|
+  = f.error_messages
+  .fields
+    = f.label :headline
+    = f.text_field :headline
+  .fields
+    = f.label_tag :image
+    = f.file_field :image
+    = f.hidden_field :image_cache
+  .fields
+    = f.label :published, "Published?"
+    = f.check_box :published
+  .fields
+    = f.submit
