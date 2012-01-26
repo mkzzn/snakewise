@@ -1,12 +1,10 @@
+= stylesheet_link_tag "headlines"
+= stylesheet_link_tag "fortunes"
+
 #headlines
   %h1 headlines
-  - @headlines.each do |headline|
-    .title= headline.title
-    .author.date.active_category!= "published by #{article.author_name} in category #{category_link(article)} on #{article.created_date}"
-    - if article.featured_image
-      .featured_image= image_tag article.featured_image.asset.large.u
+  = render @headlines
 
-= stylesheet_link_tag "fortunes"
 #fortunes
   %h1 fortunes
   = render @fortunes

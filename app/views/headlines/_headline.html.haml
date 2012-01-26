@@ -1,9 +1,9 @@
-- if can? :view, fortune
-  %div[fortune]{:class => cycle("odd", "even", :name => "fortunes")}
-    = link_to fortune.fortune, fortune_path(fortune), :class => "title"
+- if can? :view, headline
+  %div[headline]{:class => cycle("odd", "even", :name => "headlines")}
+    = link_to headline.headline, headline_path(headline), :class => "title"
+    .image= image_tag headline.image_url if headline.image?
     .info
-      .byline!= "by #{fortune.author_name} on #{fortune.created_date}"
-      - if can? :edit, fortune
-        %span.published= "[ #{fortune.published_state} ]"
+      .byline!= "by #{headline.author_name} on #{headline.created_date}"
+      - if can? :edit, headline
+        %span.published= "[ #{headline.published_state} ]"
     .clear
-    -# .comments= comments_link(fortune)

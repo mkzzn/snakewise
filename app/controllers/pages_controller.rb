@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def homepage
-    @headlines = Article.where :category_id => 2
+    @headlines = Headline.published.all
     @fortunes = Fortune.published.all
   end
 

@@ -1,56 +1,59 @@
-#fortunes a {
-  color: #222222;
-  font-size: 2.2em;
-  font-family: "Droid Serif", serif;
-  text-decoration: none;
-  display: block;
-  margin-top: 6px; }
-#fortunes a:hover {
-  text-decoration: underline; }
-
-#headlines, #fortunes {
-  width: 400px;
-  float: left; }
-  #headlines h1, #fortunes h1 {
+#headlines {
+  width: 520px;
+  float: left;
+  border-left: 1px dotted #cccccc; }
+  #headlines a {
+    color: #222222;
+    font-size: 2.2em;
+    font-family: "Droid Serif", serif;
+    text-decoration: none;
+    display: block;
+    margin-top: 6px; }
+  #headlines a:hover {
+    text-decoration: underline; }
+  #headlines h1 {
     font-family: "Droid Serif";
     font-size: 5.2em;
     font-weight: normal;
     margin: 20px 0 0 0; }
 
-.fortune {
+.headline {
   margin-top: 20px; }
-  .fortune a.title {
-    color: #cccccc;
+  .headline a.title {
+    color: #222222;
     font-family: "Droid Serif", serif;
     font-weight: normal;
     text-decoration: none;
     text-transform: none; }
-  .fortune .published {
+  .headline .published {
     font-family: "Droid Serif", serif;
     font-size: 12px;
     font-weight: bold;
     text-transform: none; }
-  .fortune h4 a.title {
+  .headline img {
+    border: 1px solid #bbbbbb;
+    margin: 8px 0; }
+  .headline h4 a.title {
     font-size: 36px; }
-  .fortune h4 a.title:hover {
+  .headline h4 a.title:hover {
     text-decoration: underline; }
-  .fortune a.title {
-    font-size: 18px; }
-  .fortune a.title:hover {
+  .headline a.title {
+    font-size: 32px; }
+  .headline a.title:hover {
     text-decoration: underline; }
-  .fortune .info {
+  .headline .info {
     font-family: "Droid Serif", serif;
     text-transform: none;
     font-weight: normal;
     font-size: 12px; }
-    .fortune .info .byline {
+    .headline .info .byline {
       display: inline; }
-  .fortune .resource_links a.edit {
+  .headline .resource_links a.edit {
     color: black;
     font-family: "Droid Serif", serif;
     font-size: 14px;
     text-decoration: none;
     float: left;
     padding: 4px; }
-  .fortune .resource_links input {
+  .headline .resource_links input {
     float: left; }

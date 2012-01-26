@@ -1,17 +1,16 @@
-#fortunes a {
-  color: #cd2626;
-  font-size: 1.6em;
-  font-family: "Droid Serif", serif;
-  text-decoration: none;
-  display: block;
-  margin-top: 6px; }
-#fortunes a:hover {
-  text-decoration: underline; }
-
-#headlines, #fortunes {
+#fortunes {
   width: 400px;
   float: left; }
-  #headlines h1, #fortunes h1 {
+  #fortunes a {
+    color: #cd2626;
+    font-size: 1.6em;
+    font-family: "Droid Serif", serif;
+    text-decoration: none;
+    display: block;
+    margin-top: 6px; }
+  #fortunes a:hover {
+    text-decoration: underline; }
+  #fortunes h1 {
     font-family: "Droid Serif";
     font-size: 5.2em;
     font-weight: normal;

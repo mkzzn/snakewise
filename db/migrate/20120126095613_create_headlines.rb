@@ -1,9 +1,9 @@
 class CreateHeadlines < ActiveRecord::Migration
   def self.up
     create_table :headlines do |t|
-      t.title :string
+      t.string :headline
       t.integer :user_id
-      t.true :published
+      t.boolean :published
       t.string :image
 
       t.timestamps

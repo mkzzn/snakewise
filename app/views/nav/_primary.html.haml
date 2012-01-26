@@ -1,17 +1,18 @@
 .section.home
-  = link_to "Home", root_path, :class => active_on("title", :pages => [:homepage])
+  = link_to "Front Page", root_path, :class => active_on("title", :pages => [:homepage])
+
+.section.headlines
+  = link_to "Headlines", headlines_path, :class => active_on("fortune title", :headlines => true)
+  - if can? :create, Headline
+    = link_to "New", new_headline_path, :class => "new"
 
 .section.home.fortunes
   = link_to "Fortunes", fortunes_path, :class => active_on("fortune title", :fortunes => true)
   - if can? :create, Fortune
     = link_to "New", new_fortune_path, :class => "new"
 
--# .section.headlines
--#   = link_to "Headlines", root_path, :class => active_on("headline title", :headlines => true)
--#   - if can? :create, Headline
--#     = link_to "New", new_headline_path, :class => "new"
-
 .section#feeds
+  = link_to "Headlines", feed_headlines_path, :class => "feed"
   = link_to "Fortunes", feed_fortunes_path, :class => "feed"
 
 -# .section.writers
