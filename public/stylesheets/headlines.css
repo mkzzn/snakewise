@@ -1,7 +1,6 @@
 #headlines {
   width: 520px;
-  float: left;
-  border-left: 1px dotted #cccccc; }
+  float: left; }
   #headlines a {
     color: #222222;
     font-size: 2.2em;
