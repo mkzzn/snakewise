@@ -12,12 +12,6 @@ class Headline < ActiveRecord::Base
   define_index do
     indexes headline, :sortable => true
     has user_id, created_at, updated_at
-
-    set_property :field_weights => {
-      :title => 5,
-      :body    => 2,
-      :teaser => 1
-    }
   end
 
   def author_name

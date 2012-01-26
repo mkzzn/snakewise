@@ -11,12 +11,6 @@ class Fortune < ActiveRecord::Base
     indexes lucky_numbers
     indexes learn_chinese
     has user_id, created_at, updated_at
-
-    set_property :field_weights => {
-      :title => 5,
-      :body    => 2,
-      :teaser => 1
-    }
   end
 
   def author_name
