@@ -1,9 +1,0 @@
-=== kgio 2.4.1 - Kgio.poll avoids EINTR, really / 2011-05-21 02:54 UTC
-
-  This release fixes a race condition that could allow
-  Errno::EINTR to be raised even though the 2.4.0 release
-  was supposed to stop that.
-
-  Nobody uses Kgio.poll, really, so this shouldn't be an issue
-  for real code, yet.
-
