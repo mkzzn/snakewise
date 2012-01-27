@@ -1,4 +1,5 @@
 $:.unshift(File.expand_path('./lib', ENV['rvm_path']))
+require 'capistrano/ext/multistage'
 require 'rvm/capistrano'
 require 'bundler/capistrano'
 
@@ -51,7 +52,15 @@ namespace :deploy do
   end
 end
 
+namespace :rvm do
+  desc 'Trust rvmrc file'
+  task :trust_rvmrc do
+    run "rvm rvmrc trust #{current_release}"
+  end
+end
+
 after 'deploy:setup', 'deploy:create_dbyaml'
 after 'deploy:update_code', 'deploy:symlink_dbyaml'
+after "deploy:update_code", "rvm:trust_rvmrc"
 
 after "deploy", "deploy:cleanup"
