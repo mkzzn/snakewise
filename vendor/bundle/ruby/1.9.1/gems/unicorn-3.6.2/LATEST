@@ -1,0 +1,10 @@
+=== unicorn 3.6.2 - fix Unicorn::OobGC module / 2011-04-30 06:40 UTC
+
+  The optional Unicorn::OobGC module is reimplemented to fix
+  breakage that appeared in v3.3.1.  There are also minor
+  documentation updates, but no code changes as of 3.6.1 for
+  non-OobGC users.
+
+  There is also a v1.1.7 release to fix the same OobGC breakage
+  that appeared for 1.1.x users in the v1.1.6 release.
+
