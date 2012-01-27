@@ -7,6 +7,7 @@
   #navigation a {
     font-size: 1.2em;
     color: black;
+    border-bottom: 2px solid white;
     display: block;
     float: left;
     font-weight: normal;
@@ -26,13 +27,25 @@
   #navigation .section {
     padding: 8px;
     float: left; }
-    #navigation .section.home a.title, #navigation .section.articles a.title, #navigation .section.categories a.title {
-      border-bottom: 2px solid white; }
-    #navigation .section.nav_item a.title, #navigation .section.home a.title, #navigation .section.articles a.title, #navigation .section.categories a.title, #navigation .section.writers a.title {
+    #navigation .section a.title {
       color: #789bc3; }
-      #navigation .section.nav_item a.title:hover, #navigation .section.nav_item a.title.active, #navigation .section.home a.title:hover, #navigation .section.home a.title.active, #navigation .section.articles a.title:hover, #navigation .section.articles a.title.active, #navigation .section.categories a.title:hover, #navigation .section.categories a.title.active, #navigation .section.writers a.title:hover, #navigation .section.writers a.title.active {
+      #navigation .section a.title:hover, #navigation .section a.title.active {
         color: #0065ba;
         border-bottom: 2px solid #0065ba; }
-    #navigation .section a.feed:hover, #navigation .section a.feed.active {
-      color: #ff6b37;
-      border-bottom: 2px solid #ff6b37; }
+  #navigation #feeds {
+    margin-top: 20px; }
+    #navigation #feeds h4 {
+      font-size: 14px;
+      margin: 0;
+      color: #333333;
+      padding: 4px 8px; }
+    #navigation #feeds a {
+      text-decoration: none;
+      float: none;
+      display: block;
+      font-weight: normal;
+      margin: 4px 0;
+      font-size: 14px; }
+      #navigation #feeds a:hover, #navigation #feeds a.active {
+        color: #ff6b37;
+        text-decoration: underline; }

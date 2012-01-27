@@ -1,44 +1,7 @@
 @font-face {
-  font-family: "Ubuntu";
-  src: url("/fonts/ubuntu_bold.ttf");
-  font-weight: bold; }
-
-@font-face {
-  font-family: "Ubuntu";
-  src: url("/fonts/ubuntu_regular.ttf");
-  font-weight: normal; }
-
-@font-face {
-  font-family: "Ubuntu";
-  src: url("/fonts/ubuntu_bold_italic.ttf");
-  font-weight: bold;
-  font-style: italic; }
-
-@font-face {
-  font-family: "Ubuntu";
-  src: url("/fonts/ubuntu_italic.ttf");
-  font-weight: normal;
-  font-style: italic; }
-
-@font-face {
   font-family: "Gauntlet";
   src: url("/fonts/gauntlet_classic.otf");
   font-weight: regular; }
-
-@font-face {
-  font-family: "Absolut";
-  src: url("/fonts/absolut_pro.otf");
-  font-weight: regular; }
-
-@font-face {
-  font-family: "Sansation";
-  src: url("/fonts/Sansation_Bold.ttf");
-  font-weight: bold; }
-
-@font-face {
-  font-family: "Nevis";
-  src: url("/fonts/nevis.ttf");
-  font-weight: bold; }
 
 body {
   margin: 0;
@@ -75,21 +38,22 @@ a#branding {
   width: 80%;
   padding: 0 10% 24px 10%; }
   #content h1 {
-    font-family: "Absolut Pro";
+    font-family: Ubuntu;
     margin-top: 20px;
     font-size: 6em; }
+    #content h1.page_title {
+      font-family: "Ubuntu";
+      font-size: 5.2em;
+      font-weight: normal;
+      margin: 20px 0 0 0; }
   #content h2, #content h3 {
-    font-family: Nevis, Ubuntu;
+    font-family: Ubuntu;
     margin: 0; }
   #content h2 {
     font-size: 4em;
     margin-top: 20px; }
   #content h3 {
     font-size: 2.8em; }
-  #content h4, #content h5 {
-    font-family: Ubuntu;
-    text-transform: uppercase;
-    margin: 0; }
   #content h4 {
     font-size: 2.1em; }
   #content h5 {
@@ -100,16 +64,6 @@ a#branding {
     width: 60%; }
     #content #primary #articles, #content #primary #testimonials {
       width: 100%; }
-
-#categories a.category {
-  font-family: Ubuntu, Nevis, Sans;
-  text-decoration: none;
-  color: black;
-  margin: 4px 0;
-  font-size: 1.2em;
-  display: block; }
-  #categories a.category:hover {
-    text-decoration: underline; }
 
 .clear {
   clear: both; }

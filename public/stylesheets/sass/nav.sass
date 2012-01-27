@@ -7,6 +7,7 @@
   a
     font-size: 1.2em
     color: black
+    :border-bottom 2px solid white
     display: block
     float: left
     :font-weight normal
@@ -27,17 +28,27 @@
   .section
     :padding 8px
     :float left
-    &.home, &.articles, &.categories
-      a.title
-        :border-bottom 2px solid white
-    &.nav_item, &.home, &.articles, &.categories, &.writers
-      a.title
-        :color #789BC3
-        &:hover, &.active
-          :color #0065BA
-          :border-bottom 2px solid #0065BA
+    a.title
+      :color #789BC3
+      &:hover, &.active
+        :color #0065BA
+        :border-bottom 2px solid #0065BA
 
-    a.feed
+  #feeds
+    margin-top: 20px
+    h4
+      font-size: 14px
+      margin: 0
+      color: #333
+      padding: 4px 8px
+    a
+      text-decoration: none
+      float: none
+      display: block
+      font-weight: normal
+      margin: 4px 0
+      font-size: 14px
+      
       &:hover, &.active
         :color #FF6B37
-        :border-bottom 2px solid #FF6B37
+        :text-decoration underline
