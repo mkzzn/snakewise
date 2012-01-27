@@ -22,9 +22,9 @@ set :rvm_type, :user
 set :default_environment, {
   'PATH' => "/home/mz/.rvm/gems/ruby-1.9.2-p290@snakewise/bin:/home/mz/.rvm/rubies/ruby-1.9.2-p290/bin:/home/mz/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games",
   'RUBY_VERSION' => 'ruby 1.9.2',
-  'GEM_HOME'    => "/home/mz/.rvm/gems/ruby-1.9.2-p290@snakewise",
-  'GEM_PATH'    => "/home/mz/.rvm/gems/ruby-1.9.2-p290@snakewise:/home/mz/.rvm/gems/ruby-1.9.2-p290@snakewise",
-  'BUNDLE_PATH'    => "/home/mz/.rvm/gems/ruby-1.9.2-p290@snakewise:/home/mz/.rvm/gems/ruby-1.9.2-p290@snakewise"
+  'GEM_HOME'    => "/var/www/snakewise/shared/bundle/ruby/1.9.1/gems:/home/mz/.rvm/gems/ruby-1.9.2-p290@snakewise",
+  'GEM_PATH'    => "/var/www/snakewise/shared/bundle/ruby/1.9.1/gems:/home/mz/.rvm/gems/ruby-1.9.2-p290@snakewise:/home/mz/.rvm/gems/ruby-1.9.2-p290@snakewise",
+  'BUNDLE_PATH'    => "/var/www/snakewise/shared/bundle/:/home/mz/.rvm/gems/ruby-1.9.2-p290@snakewise:/home/mz/.rvm/gems/ruby-1.9.2-p290@snakewise"
 }
 
 #set :port, 1440                      # The port you've setup in the SSH setup section
