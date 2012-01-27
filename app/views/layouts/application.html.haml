@@ -19,11 +19,10 @@
     %a#branding{:href => "/"}
       .title Snakewise
       .subtitle The Wisest of All Snakes.
-    #sidebar
-      = render :partial => "layouts/search"
-      = render :partial => "layouts/session"
     .clear
-    #navigation= render :partial => "nav/primary"
+    #sidebar
+      #navigation= render :partial => "nav/primary"
+      #session= render :partial => "layouts/session"
     #flash!= show_flash
     #content
       #primary= yield

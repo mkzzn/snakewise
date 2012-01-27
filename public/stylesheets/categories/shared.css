@@ -35,13 +35,13 @@
     #content .category .article a.category {
       font-size: 1.3em; }
     #content .category .article a.title {
-      font-family: "Brawler", Serif;
+      font-family: "Droid Serif", Serif;
       font-size: 2.3em; }
     #content .category .article .teaser {
       font-size: 1.4em;
       color: #222222;
       font-style: italic;
-      font-family: Ubuntu, Nevis; }
+      font-family: "Ubuntu", sans-serif; }
       #content .category .article .teaser p {
         margin: 0;
         padding: 0; }
@@ -75,7 +75,7 @@
     border: none;
     cursor: pointer;
     text-decoration: none;
-    font-family: Absolut;
+    font-family: Ubuntu;
     font-size: 1.6em; }
     .resource_links a:hover, .resource_links input:hover, .active_category a:hover, .active_category input:hover {
       text-decoration: underline; }
