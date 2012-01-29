@@ -43,6 +43,7 @@
     font-weight: normal;
     font-size: 12px; }
     .fortune .info .byline {
+      color: #444444;
       display: inline; }
   .fortune .resource_links a.edit {
     color: black;
