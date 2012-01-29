@@ -3,6 +3,10 @@ db/*.sqlite3
 log/*.log
 tmp/**/*
 public/uploads
+capistrano
+capistrano/**/*
+capistrano/*
+
 
 .\#*
 **/.\#*
