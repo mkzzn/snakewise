@@ -1,7 +1,12 @@
 class PagesController < ApplicationController
   def homepage
-    @headlines = Headline.published.all
-    @fortunes = Fortune.published.all
+    if can? :manage, Fortune
+      @fortunes = Fortune.order "created_at desc"
+      @headlines = Headline.order "created_at desc"
+    else 
+      @fortunes = Fortune.published.order "created_at desc"
+      @headlines = Headline.published.order "created_at desc"
+    end
   end
 
   def writers
