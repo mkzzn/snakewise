@@ -8,6 +8,12 @@
     = f.label :headline
     = f.text_field :headline
   .fields
+    - if @headline.image?
+      = label_tag "Current image"
+      .image= image_tag @headline.image_url
+    - else
+      = label_tag "No image has been uploaded"
+  .fields
     = f.label :image
     = f.file_field :image
     = f.hidden_field :image_cache
