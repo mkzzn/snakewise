@@ -46,7 +46,7 @@ namespace :deploy do
 
   desc "Make symlink for uploads" 
   task :symlink_uploads do
-    run "ln -nfs #{shared_path}/public/uploads #{release_path}/public/uploads" 
+    run "ln -nfs #{shared_path}/uploads #{release_path}/public/uploads" 
   end
 
   desc "Create empty database.yml in shared path" 
