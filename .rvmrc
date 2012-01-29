@@ -1,9 +1,9 @@
 install_on_use_flag=1
 rvm_trust_rvmrcs_flag=1
-rvm use 1.9.2@snakewise
+rvm use 1.9.2-p180@snakewise
 
-if [[ -s "/home/mz/.rvm/environments/ruby-1.9.2-p290@snakewise" ]] ; then
-  . "/home/mz/.rvm/environments/ruby-1.9.2-p290@snakewise"
+if [[ -s "/home/mz/.rvm/environments/ruby-1.9.2-p180@snakewise" ]] ; then
+  . "/home/mz/.rvm/environments/ruby-1.9.2-p180@snakewise"
 else
-  rvm --create use  "ruby-1.9.2-p290@snakewise"
+  rvm --create use  "ruby-1.9.2-p180@snakewise"
 fi
