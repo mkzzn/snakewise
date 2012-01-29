@@ -44,6 +44,11 @@ namespace :deploy do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml" 
   end
 
+  desc "Make symlink for uploads" 
+  task :symlink_uploads do
+    run "ln -nfs #{shared_path}/public/uploads #{release_path}/public/uploads" 
+  end
+
   desc "Create empty database.yml in shared path" 
   task :create_dbyaml do
     run "mkdir -p #{shared_path}/config" 
@@ -60,6 +65,7 @@ end
 
 after 'deploy:setup', 'deploy:create_dbyaml'
 after 'deploy:update_code', 'deploy:symlink_dbyaml'
+after 'deploy:update_code', 'deploy:symlink_uploads'
 after "deploy:update_code", "rvm:trust_rvmrc"
 
 after "deploy", "deploy:cleanup"
