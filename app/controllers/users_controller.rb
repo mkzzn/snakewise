@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    authorize! :index, @users
+    authorize! :view, @users
   end
 
   def edit

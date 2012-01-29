@@ -2,7 +2,7 @@
   = link_to "Front Page", root_path, :class => active_on("title", :pages => [:homepage])
 
 .section.home.headlines
-  = link_to "Headlines", headlines_path, :class => active_on("fortune title", :headlines => true)
+  = link_to "Headlines", headlines_path, :class => active_on("headline title", :headlines => true)
   - if can? :create, Headline
     = link_to "New", new_headline_path, :class => "new"
 
@@ -10,6 +10,10 @@
   = link_to "Fortunes", fortunes_path, :class => active_on("fortune title", :fortunes => true)
   - if can? :create, Fortune
     = link_to "New", new_fortune_path, :class => "new"
+
+- if can? :view, User.new
+  .section.home.users
+    = link_to "Users", users_path, :class => active_on("user title", :users => true)
 
 -# .section.home#feeds
 -#   %h4 Feeds

@@ -6,6 +6,11 @@ class Ability
     case @user.role
     when "admin"
       can :manage, :all
+    when "writer"
+      can :manage, Fortune
+      can :manage, Headline
+      can :view, User
+      can_manage_self
     when "reader"
       can :view, Fortune, :published => true
       can :view, Headline, :published => true

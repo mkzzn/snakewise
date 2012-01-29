@@ -25,5 +25,5 @@ class User < ActiveRecord::Base
     role == "admin"
   end
 
-  ROLES = %w[ reader admin ]
+  ROLES = %w[ reader writer admin ]
 end
