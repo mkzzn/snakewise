@@ -11,7 +11,7 @@
   - if can? :create, Fortune
     = link_to "New", new_fortune_path, :class => "new"
 
-- if can? :view, User.new
+- if current_user and can? :index, User
   .section.home.users
     = link_to "Users", users_path, :class => active_on("user title", :users => true)
 

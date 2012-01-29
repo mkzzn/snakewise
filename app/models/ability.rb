@@ -9,18 +9,15 @@ class Ability
     when "writer"
       can :manage, Fortune
       can :manage, Headline
-      can :view, User
-      can_manage_self
+      can :index, User
+      can :edit, User, :id => @user.id
     when "reader"
       can :view, Fortune, :published => true
       can :view, Headline, :published => true
-      can_manage_self
+      can :edit, User, :id => @user.id
     end
   end
 
   def can_manage_self
-    can [:manage], User, ["id = ?", @user.id] do |current_user|
-      current_user.id == @user.id
-    end
   end
 end

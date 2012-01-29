@@ -1,5 +1,9 @@
 %tr{:class => cycle("odd", "even"), :name => "user rows"}[user]
-  %td.email= link_to user.email, edit_user_path(user), :class => "edit"
+  %td.email
+    - if can? :edit, user
+      = link_to user.email, edit_user_path(user), :class => "edit"
+    - else
+      = user.email
   %td.role= user.role
   %td.first_name= user.first_name
   %td.last_name= user.last_name

@@ -3,16 +3,19 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    authorize! :view, @users
+    authorize! :index, User
   end
 
   def edit
+    authorize! :edit, @user
   end
 
   def show
+    authorize! :view, @user
   end
 
   def update
+    authorize! :edit, @user
     if @user.update_attributes filtered_params
       flash[:notice] = "User '#{@user.email}' was successfully updated."
       redirect_to users_path
