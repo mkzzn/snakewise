@@ -17,7 +17,8 @@
     margin: 20px 0 0 0; }
 
 .fortune {
-  margin-top: 20px; }
+  margin-top: 20px;
+  max-width: 480px; }
   .fortune a.title {
     color: #cd2626;
     font-family: "Droid Serif", serif;
@@ -30,7 +31,7 @@
     font-weight: bold;
     text-transform: none; }
   .fortune h4 a.title {
-    font-size: 36px; }
+    font-size: 32px; }
   .fortune h4 a.title:hover {
     text-decoration: underline; }
   .fortune a.title {
