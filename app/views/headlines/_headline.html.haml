@@ -3,7 +3,7 @@
     = link_to headline.headline, headline_path(headline), :class => "title"
     .image= image_tag headline.image_url if headline.image?
     .info
-      .byline!= "by #{headline.author_name} on #{headline.created_date}"
+      .byline!= "by #{headline.display_name} on #{headline.created_date}"
       - if can? :edit, headline
         %span.published= "[ #{headline.published_state} ]"
     .clear

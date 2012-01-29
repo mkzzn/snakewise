@@ -17,6 +17,10 @@ class Fortune < ActiveRecord::Base
     user.full_name rescue nil
   end
 
+  def display_name
+    user.display_name || user.full_name rescue nil
+  end
+
   def created_date
     created_at.strftime("%Y-%m-%d") rescue nil
   end

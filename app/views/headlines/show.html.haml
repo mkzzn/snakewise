@@ -4,7 +4,7 @@
   %h4
     = link_to @headline.headline, @headline, :class => "title"
     .info
-      .byline!= "by #{@headline.author_name} on #{@headline.created_date}"
+      .byline!= "by #{@headline.display_name} on #{@headline.created_date}"
       - if can? :manage, @headline
         %span.published= "[ #{@headline.published_state} ]"
   = image_tag @headline.image_url if @headline.image?
