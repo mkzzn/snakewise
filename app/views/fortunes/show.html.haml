@@ -1,5 +1,6 @@
 = stylesheet_link_tag "fortunes"
 
+%h1.page_title= "Fortune ##{@fortune.id}"
 %div[@fortune]
   %h4
     = link_to @fortune.fortune, @fortune, :class => "title"
