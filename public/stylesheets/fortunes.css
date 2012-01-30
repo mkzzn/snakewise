@@ -55,3 +55,7 @@
     padding: 4px; }
   .fortune .resource_links input {
     float: left; }
+
+.fields textarea {
+  height: 100px;
+  width: 520px; }

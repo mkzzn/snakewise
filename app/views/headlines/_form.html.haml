@@ -6,7 +6,7 @@
   = f.error_messages
   .fields
     = f.label :headline
-    = f.text_field :headline
+    = f.text_area :headline
   .fields
     - if @headline.image?
       = label_tag "Current image"
