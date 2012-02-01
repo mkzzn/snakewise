@@ -8,6 +8,8 @@ class HeadlinesController < ApplicationController
       @headlines = Headline.published.order "created_at desc"
     end
 
+    @meta_tags[:title] = "Headlines"
+
     respond_to do |format|
       format.html     # index.html.erb
       format.xml  { render :xml => @headlines }
@@ -15,6 +17,7 @@ class HeadlinesController < ApplicationController
   end
 
   def show
+    @meta_tags[:title] = "Headlines | #{@headline[:headline]}"
     authorize! :view, @headline
     # @comments = @headline.comments
     # @comment = Comment.new :headline_id => @headline.id
@@ -30,6 +33,7 @@ class HeadlinesController < ApplicationController
   end
 
   def edit
+    @meta_tags[:title] = "Edit Headline"
     authorize! :edit, @headline
   end
 
@@ -64,6 +68,7 @@ class HeadlinesController < ApplicationController
   end
 
   def new
+    @meta_tags[:title] = "New Headline"
     authorize! :build, Headline
     @headline = Headline.new
   end

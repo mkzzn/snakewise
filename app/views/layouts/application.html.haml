@@ -1,6 +1,7 @@
 %html
   %head
-    %title Snakewise 
+    %title= "Snakewise | #{@meta_tags[:title]}"
+    %meta{:description => "Snakewise | #{@meta_tags[:title]}"}
     = stylesheet_link_tag "layouts/application"
     = stylesheet_link_tag "errors"
     = stylesheet_link_tag "forms"

@@ -2,6 +2,8 @@ class FortunesController < ApplicationController
   before_filter :fetch_fortune, :only => [:show, :update, :edit, :destroy]
 
   def index
+    @meta_tags[:title] = "Fortunes"
+
     if can? :manage, Fortune
       @fortunes = Fortune.order "created_at desc"
     else 
@@ -15,6 +17,8 @@ class FortunesController < ApplicationController
   end
 
   def show
+    @meta_tags[:title] = "Fortune ##{@fortune[:id]}"
+
     authorize! :view, @fortune
     # @comments = @fortune.comments
     # @comment = Comment.new :fortune_id => @fortune.id
@@ -30,6 +34,7 @@ class FortunesController < ApplicationController
   end
 
   def edit
+    @meta_tags[:title] = "Edit Fortune ##{@fortune[:id]}"
     authorize! :edit, @fortune
   end
 
@@ -64,6 +69,7 @@ class FortunesController < ApplicationController
   end
 
   def new
+    @meta_tags[:title] = "New Fortune"
     authorize! :build, Fortune
     @fortune = Fortune.new
   end
