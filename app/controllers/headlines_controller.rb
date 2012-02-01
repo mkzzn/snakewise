@@ -17,7 +17,7 @@ class HeadlinesController < ApplicationController
   end
 
   def show
-    @meta_tags[:title] = "Headlines | #{@headline[:headline]}"
+    @meta_tags[:title] = "#{@headline[:headline]}"
     authorize! :view, @headline
     # @comments = @headline.comments
     # @comment = Comment.new :headline_id => @headline.id
