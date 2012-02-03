@@ -8,6 +8,7 @@ public/uploads/**/*
 capistrano
 capistrano/**/*
 capistrano/*
+config/database.yml
 
 
 .\#*
